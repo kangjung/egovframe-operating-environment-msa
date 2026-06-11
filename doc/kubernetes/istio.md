@@ -2,7 +2,7 @@
 ### 1) Istio 설치
 
 - Kubernetes-Istio 호환 버전 확인
-    ![istio_version](/images/istio_version.png)
+    ![istio_version](../images/istio_version.png)
 
 - Kubernetes에서 지원되는 버전을 사용해야함
     - 프로젝트의 버전 구성

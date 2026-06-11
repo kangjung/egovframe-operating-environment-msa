@@ -18,9 +18,9 @@ OpenSearch 한글 형태소 분석기(Opensearch-with-nori) 설치
     docker build -t opensearch-with-nori:2.15.0 -f Dockerfile.opensearch-with-nori .
     ```   
     - build 결과   
-        ![egovsearch_image_build](./images/opensearch-with-nori.png)
+        ![egovsearch_image_build](../images/opensearch-with-nori.png)
     - docker-desktop상 image가 추가되었는지 확인
-        ![docker-image_opensearch-with-nori](./images/docker-opensearch-image.png)
+        ![docker-image_opensearch-with-nori](../images/docker-opensearch-image.png)
 
 
 ## 3. 서비스 이미지 빌드
@@ -133,12 +133,12 @@ OpenSearch 한글 형태소 분석기(Opensearch-with-nori) 설치
                 ```
     - 이미지 빌드 결과 확인
         - 빌드 후 출력되는 결과
-            ![docker-image-build-shell](./images/docker-image-build.png)   
+            ![docker-image-build-shell](../images/docker-image-build.png)
             - 명령어를 통해서도 확인 가능   
                 ```docker images | grep latest```
 
         - docker-desktop   
-            ![docker_image_docker-desktop](./images/docker_image_docekr-desktop.png)
+            ![docker_image_docker-desktop](../images/docker_image_docekr-desktop.png)
 
 ---
 

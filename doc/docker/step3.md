@@ -149,7 +149,7 @@
 
 ### 3. 빌드 후 내부 디렉토리
 - 각 서비스별 내부에 target 폴더 생성 확인   
-    ![target](./images/target.png)
+    ![target](../images/target.png)
 
 ---
 

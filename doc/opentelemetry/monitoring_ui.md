@@ -204,6 +204,6 @@ Trace (하나의 사용자 요청)
 
 ## 참고 자료
 
-- [OpenTelemetry 구성 가이드](../opentelemetry_config_guide.md)
+- [OpenTelemetry 구성 가이드](opentelemetry_config_guide.md)
 - [OpenTelemetry 소개](../intro/opentelemetry.md)
 - [Kubernetes 배포 가이드](../kubernetes/guide.md)

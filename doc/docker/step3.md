@@ -67,7 +67,7 @@
         return 0
     }
     ```
-    - [EgovSearch Readme](readme.md) 참고하여 OpenSearch 구성 후 config_file에 지정된 경로에서 password 변경
+    - [EgovSearch README](https://github.com/eGovFramework/egovframe-msa-common-components/blob/main/EgovSearch/README.md) 참고하여 OpenSearch 구성 후 config_file에 지정된 경로에서 password 변경
     - OpenSearch 구성 시 기본 password는 'admin'
 
 

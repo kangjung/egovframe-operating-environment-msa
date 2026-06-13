@@ -35,10 +35,13 @@ kubectl create namespace egov-storage
 - 사용하는 IP로 수정   
     `APIGATEWAY_ALLOWED_ORIGIN: http://localhost:9000,http://<서버의 IP>:9000`   
     *','로 구분하여 여러개 지정 가능
-#### 2) configmap 배포
+#### 2) configmap / secret 배포
 ```bash
 kubectl apply -f ~/egovframe-operating-environment-msa/k8s-deploy/manifests/common/egov-common-configmap.yaml -n egov-app
 kubectl apply -f ~/egovframe-operating-environment-msa/k8s-deploy/manifests/common/egov-common-configmap.yaml -n egov-infra
+
+# JWT 토큰 Secret (egov-app)
+kubectl apply -f ~/egovframe-operating-environment-msa/k8s-deploy/manifests/common/egov-jwt-secret.yaml
 ```
 
 ### 3. Istio 설정

@@ -45,13 +45,13 @@ spec:
           value: "false"
         - name: token.accessSecret
           valueFrom:
-            configMapKeyRef:
-              name: egov-common-config
+            secretKeyRef:
+              name: egov-jwt-secret
               key: TOKEN_ACCESS_SECRET
         - name: token.refreshSecret
           valueFrom:
-            configMapKeyRef:
-              name: egov-common-config
+            secretKeyRef:
+              name: egov-jwt-secret
               key: TOKEN_REFRESH_SECRET
         - name: token.accessExpiration
           valueFrom:

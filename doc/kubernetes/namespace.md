@@ -73,12 +73,11 @@ DB설정, Spring JPA, 인증토큰 등의 설정을 모아놓은 파일입니다
 
 - 인증 Token
     ```yaml
-    # Token Configuration
-    TOKEN_ACCESS_SECRET: "7FB814B9D7FFB3D675EF1F525C1D61B254227B3B0A771DDDBDFE4112A1F42F66"
-    TOKEN_REFRESH_SECRET: "7FB814B9D7FFB3D675EF1F525C1D61B254227B3B0A771DDDBDFE4112A1F42F66"
+    # Token Configuration (만료시간만 ConfigMap에서 관리)
     TOKEN_ACCESS_EXPIRATION: "1200000"
     TOKEN_REFRESH_EXPIRATION: "3600000"
     ```
+    - `TOKEN_ACCESS_SECRET` / `TOKEN_REFRESH_SECRET` 는 민감정보이므로 ConfigMap이 아닌 `egov-jwt-secret`(Secret)으로 분리하여 관리합니다.
 
 - 사용자 권한 지정
     ```yaml
@@ -105,10 +104,13 @@ DB설정, Spring JPA, 인증토큰 등의 설정을 모아놓은 파일입니다
     - EgovBoard (게시판) 서비스에서 사용
     - Ckeditor의 이미지와 게시판 첨부파일 관리
 
-#### 2) configmap 배포
+#### 2) configmap / secret 배포
 ```bash
 kubectl apply -f ~/egovframe-operating-environment-msa/k8s-deploy/manifests/common/egov-common-configmap.yaml -n egov-app
 kubectl apply -f ~/egovframe-operating-environment-msa/k8s-deploy/manifests/common/egov-common-configmap.yaml -n egov-infra
+
+# JWT 토큰 Secret (egov-app)
+kubectl apply -f ~/egovframe-operating-environment-msa/k8s-deploy/manifests/common/egov-jwt-secret.yaml
 ```
 
 ---
